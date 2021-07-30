@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="TestNGListenerSuite Regression">
+
+	<listeners>
+
+		<listener class-name="listeners.ExtentReportListener" />
+	</listeners>
+
+	<test name="Tutorial Regression Test">
+		<classes>
+			<class name="Tutorial_Class__01_Listener_Test_Case">
+				<methods>
+					<include name="test_case_01" />
+					<include name="test_case_02" />
+				</methods>
+			</class>
+
+			<class name="Tutorial_Class__02_Listener_Test_Case">
+				<methods>
+					<include name="test_case_03" />
+					<include name="test_case_04" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
