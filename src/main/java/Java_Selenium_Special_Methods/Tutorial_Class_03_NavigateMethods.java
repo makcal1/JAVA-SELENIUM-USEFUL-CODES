@@ -21,6 +21,8 @@ public class Tutorial_Class_03_NavigateMethods {
 	
 	WebElement email = driver.findElement(By.id("email"));
 	WebElement password = driver.findElement(By.id("pass"));
+	WebElement passwords = driver.findElement(By.id("pass"));
+	
 	
 	
 	if(email.isDisplayed() && email.isEnabled()) {
@@ -31,6 +33,16 @@ public class Tutorial_Class_03_NavigateMethods {
 	if(password.isDisplayed() && password.isEnabled()) {
 		
 		password.sendKeys("pasdsd");
+	}
+	if(passwords.isSelected()) {
+		
+		System.out.println("Test is passed");
+		
+	}else {
+		driver.navigate().refresh();
+		driver.navigate().refresh();
+		driver.navigate().refresh();
+		driver.navigate().refresh();
 	}
 	
 	

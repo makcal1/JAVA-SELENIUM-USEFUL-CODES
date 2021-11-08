@@ -6,10 +6,12 @@ import java.net.URL;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
+
 
 
 public class LogintestOnWIndowsusingChrome {
@@ -23,6 +25,8 @@ public class LogintestOnWIndowsusingChrome {
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		cap.setBrowserName("chrome");
 		cap.setPlatform(Platform.WINDOWS);
+		
+		WebElement x = driver.findElement(By.xpath("//aa"));
 		
 		
 		
