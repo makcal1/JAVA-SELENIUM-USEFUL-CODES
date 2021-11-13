@@ -24,7 +24,7 @@ public class LinkedListDemo_01 {
 		//remove
 		l.remove(3); //index
 		System.out.println("After remoeving:" + l); // [100, welcome, 15.5, true, null]
-
+ 
 		// Insert element
 		l.add(3, "Java");
 		System.out.println("After inserting element:" + l); // [100, welcome, 15.5, Java, true, null]

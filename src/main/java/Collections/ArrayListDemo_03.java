@@ -16,6 +16,7 @@ public class ArrayListDemo_03 {
 
 		ArrayList al = new ArrayList(Arrays.asList(arr));
 		System.out.println(al);
+
 	 
 	}
 
