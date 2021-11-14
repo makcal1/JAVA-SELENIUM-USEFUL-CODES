@@ -6,7 +6,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.apache.logging.log4j.util.LambdaUtil;
+import org.apache.xmlbeans.impl.xb.xmlconfig.Extensionconfig.Interface;
+
 public class HashTable {
+	
 
 	public static void main(String[] args) {
 
@@ -16,7 +20,7 @@ public class HashTable {
 		Hashtable<Integer, String> t = new Hashtable<Integer, String>();
 		t.put(101, "John");
 		t.put(102, "David");
-		t.put(103, "Smith");
+		t.put(103, "Smith;Akcal");
 		//t.put(104, null); //NullPointerException
 		//	t.put(null, "X");//NullPointerException
 
@@ -39,26 +43,26 @@ public class HashTable {
 			//			102  David
 			//			101  John
 		}
-		
-		 
+
+
 		for (Map.Entry entry:t.entrySet()) { // (key,value)
 			System.out.println(entry.getKey() + "  " + entry.getValue());
 			//			102  David
 			//			101  John
 		}
-		
+
 		// iterator()
 		Set set = t.entrySet();
 		Iterator iterator = set.iterator();
 		while(iterator.hasNext()) {
 			Map.Entry entry =  (Entry) iterator.next();
 			System.out.println(entry.getKey() + "  " + entry.getValue());
+			//			102  David
+			//			101  John
 		}
-
-
-
-
-
+		
+		
+		
 	}
 
 }
