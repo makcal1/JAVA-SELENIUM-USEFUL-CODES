@@ -1,5 +1,6 @@
 package Lambda_Expression;
 
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class PredicateInterface_01 {
@@ -9,6 +10,8 @@ public class PredicateInterface_01 {
 		//Ex1 :
 		Predicate<Integer> p = i->(i>10);
 		System.out.println(p.test(20)); //true
+		
+	
 		
 		//Ex2 :check the length of given string is equal,greater than 4 or not
 		Predicate<String> pr = s->(s.length()>=4);
