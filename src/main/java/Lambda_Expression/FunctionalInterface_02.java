@@ -1,6 +1,6 @@
 package Lambda_Expression;
-
 import java.util.ArrayList;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -9,7 +9,7 @@ class Workers
 	String ename;
 	int salary;
 
-	 Workers(String ename,int salary) {
+	Workers(String ename,int salary) {
 		this.ename = ename;
 		this.salary = salary;
 	}
@@ -23,6 +23,7 @@ public class FunctionalInterface_02 {
 		employeList.add(new Workers("John",30000));
 		employeList.add(new Workers("Mary",20000));
 
+		//Function
 		Function<Workers, Integer> fn = e->{
 			int sal = e.salary;
 
@@ -36,17 +37,22 @@ public class FunctionalInterface_02 {
 				return (sal*40/100);
 		};
 		
+		//Predicate
 		Predicate<Integer> p = b->b>5000;
 		
+		// Consumer
+		Consumer<Workers> consumer = employee -> {System.out.println("Employee Name -> " + employee.ename + " ||" +" Salary :" + employee.salary);};
+
 		for (Workers employee : employeList) {
-		int bonus=	fn.apply(employee); // Function
-		if(p.test(bonus)){ // Predicated)
-			System.out.println("Employee Name: " + employee.ename + " ---" +" Salary :" + employee.salary +  " ---" +" Bonus : " + bonus);
-			
+			int bonus=	fn.apply(employee); // Function
+			if(p.test(bonus)){ // Predicated
+				consumer.accept(employee);
+				System.out.println("Employee bonus : " + bonus);
+
+			}
+
 		}
-		
-		}
-		
+
 
 	}
 

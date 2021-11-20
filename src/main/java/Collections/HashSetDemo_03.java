@@ -38,11 +38,11 @@ public class HashSetDemo_03 {
 		// difference
 
 		set1.removeAll(set2);
-	//	System.out.println("difference " + set1);
+		System.out.println("difference " + set1);
 		
 		// subset
 		set1.containsAll(set2);
-	//	System.out.println("subset :" + set1);
+		System.out.println("subset :" + set1);
         
 		
 	}
