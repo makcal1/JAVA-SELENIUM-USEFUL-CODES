@@ -30,6 +30,8 @@ public class PredicateInterface_02 {
 		System.out.println(condition1.test(employee)); //true
 
 		Predicate<Employee> condition2= s->(s.employeeNumber>=2020);
+//----------------------------------------------------------------------------------------------------------//
+		
 		// Ex2:
 		ArrayList<Employee> al = new ArrayList<Employee>();
 		al.add(new Employee("John" ,50000,5,2012));
@@ -40,8 +42,8 @@ public class PredicateInterface_02 {
 		for (Employee e : al) {
 			if(condition1.and(condition2).test(e))
 			{
-				System.out.println(e.ename + "  " + e.salary + "   " + e.employeeNumber);
-				//Marry  40000   2030
+				System.out.println(e.ename + "  " + e.salary + "   " + e.employeeNumber); //Marry  40000   2030
+				
 			}
 		}
 

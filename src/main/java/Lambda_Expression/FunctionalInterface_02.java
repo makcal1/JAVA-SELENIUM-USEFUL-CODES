@@ -36,10 +36,10 @@ public class FunctionalInterface_02 {
 			else
 				return (sal*40/100);
 		};
-		
+
 		//Predicate
 		Predicate<Integer> p = b->b>5000;
-		
+
 		// Consumer
 		Consumer<Workers> consumer = employee -> {System.out.println("Employee Name -> " + employee.ename + " ||" +" Salary :" + employee.salary);};
 
@@ -49,10 +49,17 @@ public class FunctionalInterface_02 {
 				consumer.accept(employee);
 				System.out.println("Employee bonus : " + bonus);
 
+
 			}
 
 		}
+		/**
+		Employee Name -> Olga || Salary :50000
+		Employee bonus : 15000
+		Employee Name -> John || Salary :30000
+		Employee bonus : 6000
 
+		 */
 
 	}
 
