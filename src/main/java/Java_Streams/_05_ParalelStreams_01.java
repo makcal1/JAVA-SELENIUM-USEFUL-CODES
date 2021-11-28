@@ -48,18 +48,25 @@ public class _05_ParalelStreams_01 {
 				new Studentka("Scott", 50));
 
 		// using normal stream() - sequencial
-//		studentList.stream().filter(s-> s.getScore()>=80)
-//							.limit(3) 
-//							.forEach(stu->System.out.println(stu.getName() + " " + stu.getScore())); // David 82 Bob 90 Eric 85
+		studentList.stream().filter(s-> s.getScore()>=80)
+		.limit(3) 
+		.forEach(stu->System.out.println(stu.getName() + " " + stu.getScore())); // David 82 Bob 90 Eric 85
 		
-		System.out.println("*********************************************************");
+//*************************************************************************************************************************************************************************//		
+
 		// parallel stream()
 		studentList.parallelStream().filter(s-> s.getScore()>=80)
 		.limit(3) 
 		.forEach(stu->System.out.println(stu.getName() + " " + stu.getScore())); // David 82 Bob 90 Eric 85
-		
-		
-		
+
+//**************************************************************************************************************************************************************************//		
+
+		// convert stream --> parallelStream()
+		studentList.stream().parallel()
+		.filter(s-> s.getScore()>=80)
+		.limit(3) 
+		.forEach(stu->System.out.println(stu.getName() + " " + stu.getScore())); // David 82 Bob 90 Eric 85
+
 
 
 
