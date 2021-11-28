@@ -29,9 +29,33 @@ public class _03_FlatMap_01 {
 		List<Integer> finalResultsList = finaList.stream().flatMap(x->x.stream().map(n->n+10)).collect(Collectors.toList());
 
 		System.out.println(finalResultsList); //[11, 12, 13, 14, 15, 16]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+		List<String> teamA = Arrays.asList("Scott","David","John");
+		List<String> teamB = Arrays.asList("Mary","Luna","Tom");
+		List<String> teamC= Arrays.asList("Ken","Jony","Kitty");
 		
+		List<List<String>> playersInWorldCup = Arrays.asList(teamA,teamB,teamC);
+		
+		/******************************************************************		  	
+		----------- Without Streams --------------
+		for (List<String> playersWorldCup : playersInWorldCup) {
+			for (String players : playersWorldCup) {
+				System.out.println(players);
+			}
+		}
+		********************************************************************/
+		
+		// With Streams(flatMap())
+		
+		List<String> playerNames=	playersInWorldCup.stream().flatMap(pList->pList.stream()).collect(Collectors.toList());
+		System.out.println(playerNames); //[Scott, David, John, Mary, Luna, Tom, Ken, Jony, Kitty]
+		
+		for (String player : playerNames) {
+			System.out.println("Player Name : " +player);
+		}	
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		
 		
