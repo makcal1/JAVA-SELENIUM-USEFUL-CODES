@@ -1,5 +1,7 @@
 package Collections;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
@@ -23,6 +25,8 @@ public class HashTable {
 		t.put(103, "Smith;Akcal");
 		//t.put(104, null); //NullPointerException
 		//	t.put(null, "X");//NullPointerException
+	
+		
 
 		System.out.println(t); //{103=Smith, 102=David, 101=John}
 		System.out.println(t.get(103)); //Smith

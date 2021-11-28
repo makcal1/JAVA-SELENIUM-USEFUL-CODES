@@ -2,6 +2,7 @@ package Collections;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,6 +17,8 @@ public class ArrayListDemo_01 {
 		arrayList.add("AIC");
 		arrayList.add(15.5);
 		arrayList.add(true);
+		
+	
 
 		//size
 		System.out.println(arrayList);
