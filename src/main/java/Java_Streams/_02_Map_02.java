@@ -37,8 +37,6 @@ public class _02_Map_02 {
 			
 			);
 	
-	Predicate<Integer> p = i->(i>40000);
-	
 	// Combination of filter and map
 	List<Integer> empSalaryList = new ArrayList<Integer>();
 	
@@ -46,9 +44,7 @@ public class _02_Map_02 {
 	
 	System.out.println(empSalaryList); //[40000, 60000, 70000, 80000]
 	
-	for (Integer salary : empSalaryList) {
-		
-	}
+
 	
 	
 	

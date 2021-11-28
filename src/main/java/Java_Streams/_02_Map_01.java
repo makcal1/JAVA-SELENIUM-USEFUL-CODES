@@ -19,7 +19,7 @@ public class _02_Map_01 {
 
 		/********************************************************* 
 		   without using streams
-		for (String name: vehicles) {
+		for (String name: vehicle) {
 			vehiclesListUpperCase.add(name.toUpperCase());			
 		} 
 
